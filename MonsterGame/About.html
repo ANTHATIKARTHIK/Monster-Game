@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body ng-controller="studentController" class="container" > <br />
+    <h1>Player Information:</h1>
+    <br><br>
+    <form class="form-horizontal" ng-submit="submitStudnetForm()" role="form">
+        <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">First Name</label>
+            <div class="col-sm-6">
+                <input type="text" id="firstName" class="form-control" ng-model="student.firstName" />
+            </div>
+            <div class="col-sm-3"></div>
+
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+            <div class="col-sm-6">
+                <input type="text" id="lastName" class="form-control" ng-model="student.lastName" />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="dob" class="col-sm-3 control-label">DoB</label>
+            <div class="col-sm-2">
+                <input type="date" id="dob" class="form-control" ng-model="student.DoB" />
+            </div>
+            <div class="col-sm-7"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="gender" class="col-sm-3 control-label">Gender</label>
+            <div class="col-sm-2">
+                <select id="gender" class="form-control" ng-model="student.gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="col-sm-7"></div>
+        </div>
+
+        <a class="btn btn-primary" href="Game.html">Save</a>
+
+        <input type="reset" value="Reset" ng-click="resetForm()" class="btn" /> <br/>
+
+    </form>
+</body>
+</html>
